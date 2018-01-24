@@ -34,6 +34,8 @@
         </element>
         <element attributes="edge_encryption_enabled=true" label="Description" max_length="40" name="u_description" type="string"/>
         <element label="Register for" max_length="80" name="u_field_name_6" type="field_name"/>
+        <element attributes="edge_encryption_enabled=true" label="Other" max_length="40" name="u_other" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Others" max_length="40" name="u_others" type="string"/>
         <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Request type" max_length="40" name="u_request_type" type="string">
             <choice>
@@ -43,7 +45,7 @@
                 <element label="Your Department Choice" sequence="3" value="your_choice"/>
             </choice>
         </element>
-        <element attributes="edge_encryption_enabled=true" label="Short description" max_length="40" name="u_short_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" dependent="u_additional_comments" dependent_on_field="u_additional_comments" label="Short description" mandatory="true" max_length="40" name="u_short_description" type="string" use_dependent_field="true"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
             <choice>
                 <element label="Human Resources 1" sequence="0" value="hr1"/>
